@@ -1,7 +1,7 @@
 # MySQL
 Neste repositório colocarei todo material, lido e feito por mim, de MySQL do ['An Introductory Guide to SQL'](https://www.educative.io/courses/introductory-guide-to-sql), curso na plataforma educative providenciado pelo github student pack e focado na parte prática, com muitos exercícios e exemplos.
 
-**Repositório em desenvolvimento!**
+**Repositório em desenvolvimento! 01/09 pastas**
 
 Nome | Descrição 
 :---------: | :------:
