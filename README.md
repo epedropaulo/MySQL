@@ -1,9 +1,10 @@
 # MySQL
+
 Neste repositório colocarei todo material, lido e feito por mim, de MySQL do ['An Introductory Guide to SQL'](https://www.educative.io/courses/introductory-guide-to-sql), curso na plataforma educative providenciado pelo github student pack e focado na parte prática, com muitos exercícios e exemplos.
 
 **Repositório em desenvolvimento! 01/09 pastas**
 
-Nome | Descrição 
+Nome | Descrição
 :---------: | :------:
 [01 - Introdução](https://github.com/epedropaulo/MySQL/tree/main/01%20-%20Introdução)| Relacional vs não relacional, Arquitetura e história do MySQL
 [02 - Basic SQL](https://github.com/epedropaulo/MySQL/tree/main/02%20-%20Basic%20SQL)| Criando databases, tipos de datas, criando tabelas e outras operações básicas.
