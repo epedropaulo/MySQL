@@ -4,7 +4,7 @@ Neste repositório colocarei todo material, lido e feito por mim, de MySQL do ['
 
 O formato dos arquivos podem estar um pouco esquisitos, mas a única maneira que pensei de provar os meus conhecimentos foi fazendo esses resumos do material que leio no curso. Entretanto, não esqueci da parte prática ela é dada pelos terminais na página do curso, mas não é o tipo de terminal que só aceita a entrada 'certa', é o tipo de terminal que aceita qualquer entrada e que permite o usuário 'brincar', com os comandos ensinados e também os que não foram ensinados. Uma real interface do MySQL.
 
-**Repositório em desenvolvimento! 01/09 pastas**
+**Repositório em desenvolvimento! 02/09 pastas**
 
 Nome | Descrição
 :---------: | :------:
