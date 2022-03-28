@@ -1,1 +1,58 @@
-vazio...
+Inserindo Data
+Aprenderemos a como inserir data usando o INSERT.
+
+Insert into [nome da tabela] (nome da coluna, col2, ..., coln)
+values(valor que entrará, val2, ..., valn);
+
+Não precisamos listar o nome da coluna em ordem que foi posto para criar a
+tabela, apenas é necessário que os valores correspondam com a coluna certa
+na mesma ordem.
+
+Nós também podemos adicionar diversas linhas ao mesmo tempo usando o INSERT.
+a sintaxe nos pede para separá-los usando vírgula.
+
+insert into [nome da tabela] (Ordem das colunas)
+values (Ordem dos valores), (outros valores);
+
+Esse método de inserir linhas é um jeito mais rápido do que inserir uma a uma.
+Adicionar múltiplas linhas da a oportunidade ao MySQL de otimizar os inserts.
+
+Entretanto, podemos usar também uma sintaxe diferente que não precisamos,
+citar o nome das colunas. porém, é necessário colocar os valores na ordem
+padrão que a tabela foi organizada.
+
+insert into [nome da tabela]
+values (valor1, valor2, valor3, valor4);
+
+E ainda há uma terceira forma de adicionar linhas a nossa tabela, que é 
+usando o nome da coluna e o valor logo em seguida. Essa sintaxe alternativa
+faz uso do SET.
+
+insert into [Nome da tabela] set [nome da coluna]=[valor], ... ;
+
+
+
+Mostrando data
+Aprenderemos a como pedir a data, de tabelas, usando o SELECT.
+
+select [nome da coluna], col2, ..., coln 
+from [nome da tabela]
+where [condições];
+
+O comando select é seguido das colunas, separadas por vírgulas, que queremos
+exibir. Usando * mostramos todas as colunas e seus dados. São mostrados na
+ordem que aparecem no MySQL.
+
+Nós também podemos fazer com que apenas linhas sob certas condições apareçam,
+como por exemplo números acima de 5, ou apenas pessoas que começam com a letra
+f.
+
+Para fazer o exemplo dos nomes que começam com F, precisaremos do operador LIKE,
+que é uma adição ao where, exemplo:
+
+SELECT * from Actors WHERE FirstName LIKE "Jen%";
+
+A resposta será todos os dados das pessoas que o "FirstName" começam com "Jen".
+O operador LIKE funciona apenas para data do tipo string, e nos permite achar 
+linhas baseado no padrão que selecionarmos.
+Pode se fazer isso também para o comando SHOW.
