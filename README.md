@@ -9,7 +9,7 @@ O formato dos arquivos podem estar um pouco esquisitos, mas a única maneira que
 Nome | Descrição
 :---------: | :------:
 [01 - Introdução](https://github.com/epedropaulo/MySQL/tree/main/01%20-%20Introdução)| Relacional vs não relacional, Arquitetura e história do MySQL
-[02 - Basic SQL](https://github.com/epedropaulo/MySQL/tree/main/02%20-%20Basic%20SQL)| Criando databases, tipos de datas, criando tabelas e outras operações básicas.
+[02 - Basic SQL](https://github.com/epedropaulo/MySQL/tree/main/02%20-%20Basic%20SQL)| Criando databases e tabelas. Diversas maneiras de inserir, buscar e atualizar data. Index e agrupamento de data.
 [03 - Joins](https://github.com/epedropaulo/MySQL/tree/main/03%20-%20Joins)| Em construção
 [04 - Nested Queries](https://github.com/epedropaulo/MySQL/tree/main/04%20-%20Nested%20Queries)| Em construção
 [05 - Multi table Operations](https://github.com/epedropaulo/MySQL/tree/main/05%20-%20Multi%20Table%20Operations)| Em construção
