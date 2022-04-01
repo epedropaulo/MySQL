@@ -1,1 +1,91 @@
-vazio...
+Deletando data
+Para deletar linhas de uma tabela, podemos usar o comando DELETE.
+O DELETE deleta uma linha inteira e não colunas individuais, para mudar
+uma coluna específica, precisa usar o comando UPDATE, o qual apresentaremos
+em seguida. Vale ressaltar que deletar todas as linhas de uma tabela, não 
+apaga a tabela em si.
+
+DELETE FROM [nome da tabela]
+WHERE [Condição para que seja deletada]
+ORDER BY col1
+LIMIT 5;
+
+Percebe-se que assim como a maioria dos comandos o DELETE, também pode receber
+diversos parâmetros e condições.
+
+Se nós pretendemos deletar todas as linhas de uma tabela, a maneira mais rápida
+de se fazer isso é usando o comando TRUNCATE. Esse comando apaga a tabela inteira
+e a recria. Isso para aumentar a velocidade de processamento.
+
+TRUNCATE [nome da tabela];
+
+
+
+Atualizando data
+Nós podemos usar o comando UPDATE para mudar o valor de uma coluna em uma linha
+ou em múltiplas linhas.
+
+UPDATE table
+SET [nome da coluna] = [valor que colocaremos], col2 = val2, … coln = valn
+WHERE <condition>;
+
+Assim como a maioria dos comandos o UPDATE, também pode receber diversos parâmetros
+e condições.
+Se não for estabelecida uma condição, o comando modificará todas as linhas.
+ele possui duas fases. Primeiro ele descobre quais linhas satisfazem a condição
+e depois as modifica.
+
+
+
+Chave primária e índices.
+Toda vez que um comando possui o parâmetro WHERE, o MySQL tem que fazer um scan de
+toda a tabela para achar as linhas que o satisfazem. Isso não é muito eficiente.
+Adicionar um index na tabela pode aumentar significadamente a velocidade de procura
+pelas linhas desejadas. O propósito do index primário é para representar a ordem
+da data. a coluna que for o index primário da tabela, não pode ser nulo.
+Nós podemos usar o seguinte comando para poder aparecer os índices de uma tabela:
+
+SHOW INDEX FROM [nome da tabela]
+
+Aqui o curso entra em uma grande explicação de índices agrupados e não agrupados.
+Mas que não descreverei por aqui.
+
+Um index não vem apenas com benefícios. Primeiro, ele ocupa espaço extra no disco.
+Segundo, ele precisa ser modificado toda vez que adicionarmos ou atualizamos a tabela.
+
+
+
+Alterações
+Nós podemos renomear tabelas, adicionar, remover, ou renomear colunas, mudar o tipo
+de uma coluna existente, etc.
+
+ALTER TABLE [nome da tabela]
+CHANGE oldColumnName newColumnName <datatype> <restrictions>;
+
+Nesse ponto o curso cita diversos exemplos usando a database que eles estabeleceram
+previamente, vale citar alguns deles.
+
+No parâmetro CHANGE, é obrigado a mudar o nome da coluna.
+ALTER TABLE [nome da tabela] CHANGE [Nome antigo] [Nome novo] 
+[Diversas alterações, como tipo, default, key.];
+
+Já no parâmetro MODIFY não pode mudar o nome da coluna.
+ALTER TABLE [nome da tabela] CHANGE [Nome da coluna] 
+[Diversas alterações, como tipo, default, key.];
+
+Podemos adicionar novas tabelas, já definindo diversas características, e até em qual
+'lugar' ficará essa coluna.
+
+ALTER TABLE [nome da tabela] ADD [nome da nova coluna]
+[características] AFTER [nome da coluna da qual essa ficará atrás];
+
+Também podemos apagar as colunas que desejamos.
+ALTER TABLE [tabela] DROP [nome da coluna];
+
+Nós também podemos colocar diversas alterações em apenas um comando, apenas os
+separando por vírgula.
+
+
+Alterando índices
+É complexo de saber quais índices criar sem observar o padrão de acesso de uma
+aplicação. Nós podemos adicionar, remover ou modificar índices depois da aplicação
