@@ -82,10 +82,24 @@ ALTER TABLE [nome da tabela] ADD [nome da nova coluna]
 Também podemos apagar as colunas que desejamos.
 ALTER TABLE [tabela] DROP [nome da coluna];
 
+Pode-se renomear a tabela com ALTER.
+ALTER TABLE [antigo nome da tabela]
+RENAME [novo nome da tabela];
+
 Nós também podemos colocar diversas alterações em apenas um comando, apenas os
 separando por vírgula.
 
 
 Alterando índices
-É complexo de saber quais índices criar sem observar o padrão de acesso de uma
-aplicação. Nós podemos adicionar, remover ou modificar índices depois da aplicação
+É complexo saber quais índices criar sem observar o padrão de acesso de uma aplicação.
+Nós podemos adicionar, remover ou modificar índices depois da aplicação ser posta 
+no banco de dados. Note que modificar os índices não muda a data na tabela.
+
+É possível adicionar e remover índices. Entretanto, precisa de um certo tipo de atenção
+especial, visto que se uma coluna tive auto incremento, não da pra remover sua condição
+de índice primário.
+
+ALTER TABLE [nome da tabela] ADD INDEX [nome do índice] (coluna);
+
+ALTER TABLE [nome da tabela] DROP INDEX [nome do índice];
+
