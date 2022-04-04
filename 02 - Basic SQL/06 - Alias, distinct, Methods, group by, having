@@ -1,0 +1,45 @@
+Alias
+Aliases são como apelidos, um nome temporário para uma tabela ou uma coluna, com o
+objetivo de facilitar a escrita de certos pedidos. Podemos usar aliases com colunas,
+tabelas, e funções do MySQL.
+
+SELECT [nome da coluna]
+AS [nome temporário]
+FROM [nome da tabela];
+
+Aqui o curso cita diversos exemplos interessantes e vale ressaltar alguns deles.
+
+Usando o aliases com funções do MySQL, junto do order by, com ele o código fica mais
+enxuto e fácil de compreender.
+
+exemplo sem alias.
+SELECT CONCAT(FirstName,' ', SecondName) FROM Actors ORDER BY CONCAT(FirstName,' ', SecondName);
+
+exemplo com alias.
+SELECT CONCAT(FirstName,' ', SecondName) AS FullName FROM Actors ORDER BY FullName;
+
+Ambos mostrarão o mesmo resultado, entretanto um possuí melhores práticas.
+
+Alguns aliases são inevitáveis. Para instâncias nós podemos usar alias duas vezes na
+mesma tabela, para comparar valores, e resgatar apenas uma que satisfaçam certas condições,
+como por exemplo:
+
+SELECT t1.FirstName, t1.NetworthInMillions
+FROM Actors AS t1,
+Actors AS t2
+WHERE t1.NetworthInMillions = t2.NetworthInMillions
+AND t1.Id != t2.Id;
+
+Percebe-se que a resposta será os atores que possuem a mesma NetWorth.
+
+
+
+Distinct
+Esse parâmetro tem como objetivo remover respostas iguais.
+
+SELECT DISTINCT col1
+FROM table;
+
+Como por exemplo, se uma coluna possui apenas 3 entradas possíveis, o retorno usando
+o DISTINCT será apenas essas 3 entradas.
+
