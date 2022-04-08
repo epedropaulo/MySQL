@@ -43,3 +43,73 @@ FROM table;
 Como por exemplo, se uma coluna possui apenas 3 entradas possíveis, o retorno usando
 o DISTINCT será apenas essas 3 entradas.
 
+
+
+Aggregate Methods
+Demonstraremos nessa parte algumas funções built-in do MySQL, as quais facilitam
+diversos processos. Uma syntax exemplo:
+
+SELECT função(coluna)
+FROM tabela;
+
+
+COUNT(coluna)
+
+Essa função conta o número de linhas em uma certa coluna.
+SELECT COUNT(*) FROM tabela;
+
+
+SUM(coluna)
+
+Essa função soma todos os valores da coluna.(Quado os dados não são compatíveis
+com a soma, string por exemplo, retorna 0.)
+SELECT SUM(coluna) FROM tabela;
+
+
+AVG(coluna)
+
+Essa função retorna o valor médio da coluna.(Também acaba retornado 0, se posto
+em string.)
+SELECT AVG(coluna) FROM tabela;
+
+
+MAX(coluna)
+MIN(coluna)
+
+Essas funções retornam, respectivamente, o maior e o menor valor da coluna.(Essa é
+compatível ao menos com strings, ele considerará a ordem alfabética.)
+SELECT MAX(coluna) FROM tabela;
+SELECT MIN(coluna) FROM tabela;
+
+
+Essas são apenas poucos exemplos comparados as possibilidades oferecidas.
+
+
+
+Parâmetro GROUP BY
+
+O GROUP BY, como o nome sugere, organiza linhas em grupos que são definidos pelos
+valores da certa coluna que escolhermos, linhas com o mesmo valor nessa coluna serão
+agrupadas. Muitas vezes esse parâmetro é usado junto com as funções do MySQL, tendo
+em vista que ele nos permite ver diversos tipos de dados.
+Sintaxe exemplo(Esta foi a sintaxe que eu pensei que pode melhor representar, mas
+sei que existem diversas possibilidades nas escolhas das colunas, e o curso
+apresenta algumas possibilidades e utilidades.)
+
+SELECT NomeDaColuna1, função(NomeDaColunaN)
+FROM NomeDaTabela
+GROUP BY NomeDaColuna1;
+
+
+
+HAVING
+Ficamos familiar com o parâmetro WHERE que é usado para filtrar as linhas. Da
+mesma forma o HAVING nos permite filtrar grupos. Esse parâmetro deve ser usado
+para decidir quais linhas formam cada grupo. Exatamente como o where, mas com
+essa diferença.(Ele explica que o HAVING pode ser usado para filtrar linhas, mas
+que é o WHERE é mais eficiente.)
+
+SELECT NomeDaColuna1, função(NomeDaColunaN) AS count
+FROM NomeDaTabela
+GROUP BY Colunas
+HAVING count > 75;
