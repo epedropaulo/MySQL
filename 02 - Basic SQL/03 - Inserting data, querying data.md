@@ -3,8 +3,7 @@
 Aprenderemos a como inserir data usando o *INSERT*.
 
 ~~~MySQL
-INSERT INTO NomeDaTabela 
-(NomeDaColuna1, Col2, ..., Coln)
+INSERT INTO NomeDaTabela (NomeDaColuna1, Col2, ..., Coln)
 VALUES (ValorDaColuna1, Val2, ..., valn);
 ~~~
 
