@@ -5,8 +5,8 @@ Uma **database** é um container que armazena todas as suas tabelas. Uma tabela 
 
 Comando | Função
 :------: | :------:
-Create database NomeDaDatabase; | Cria uma database completamente nova.
-Drop database NomeDaDatabase; | Deleta uma database.
+CREATE DATABASE NomeDaDatabase; | Cria uma database completamente nova.
+DROP DATABASE NomeDaDatabase; | Deleta uma database.
 
 (*É possível também em SQL, usar comandos para executar apenas sob certas circunstâncias, um exemplo disso é o comando a seguir:*)
 
@@ -41,16 +41,15 @@ CREATE TABLE NomeDaTabela(
 
 1. Em uma database relacional nós devemos identificar uma linha, escolhendo uma coluna ou um conjunto de colunas como a chave primária. Uma forma muito comum de identificarmos apenas uma linha é adicionarmos uma coluna ID, que recebe um numérico diferente para cada linha da tabela, e para isso o *MySQL* tem uma função muito interessante, chamada *AUTO_INCREMENT* que por default põe o próximo número inteiro.
 
-2. Restringir as possibilidades de entrada, como por
-exemplo, impedir que seja posto como data o 'null', conhecido como vazio. E para isso podemos marcar a coluna como: not null, assim o usuário é obrigado a passar um valor valido para a coluna.
+2. Restringir as possibilidades de entrada, como por exemplo, impedir que seja posto como data o *NULL*, conhecido como vazio. E para isso podemos marcar a coluna como: *NOT NULL*, assim o usuário é obrigado a passar um valor valido para a coluna.
 
-3. Também podemos usar um valor DEFAULT, para caso um parâmetro não seja passado, será definido um valor padrão, para melhor análise posterior da data.
+3. Também podemos usar um valor *DEFAULT*, para caso um parâmetro não seja passado, será definido um valor padrão, para melhor análise posterior da data.
 
 Lembrando que podemos aplicar essas restrições em conjunto, para criar uma database que possua a data bem organizada e específica.
 
 ### **Tabelas temporárias**
 
-Existem também tabelas do tipo temporária, que é igual a uma tabela padrão. Entretanto quando a interface do MySQL for finalizada essa tabela se apagará.
+Existem também tabelas do tipo temporária, que é igual a uma tabela padrão. Entretanto quando a interface do *MySQL* for finalizada essa tabela se apagará.
 
 ~~~MySQL
 CREATE TEMPORARY TABLE NomeDaTabela(
