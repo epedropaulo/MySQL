@@ -3,7 +3,7 @@
 Uma **database** é um container que armazena todas as suas tabelas. Uma tabela armazena a data organizada em linhas e colunas. Uma coluna
 é um pedaço de data que é um dos atributo de uma entidade. Uma linha é um conjunto de colunas que definem os atributos dessa entidade.
 
-Comando | Função
+Comando | Descrição
 :------: | :------:
 CREATE DATABASE NomeDaDatabase; | Cria uma database completamente nova.
 DROP DATABASE NomeDaDatabase; | Deleta uma database.
