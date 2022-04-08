@@ -4,7 +4,7 @@
 
 ## Comandos Básicos no MySQL
 
-Comando | Função
+Comando | Descrição
 :------: | :------:
 SHOW databases; | Mostra as databases que o usuário pode ver.
 USE NomeDaDatabase; | Informa ao DBMS que todos os nossos pedidos serão executados direto da database de nossa escolha.
