@@ -121,7 +121,7 @@ GROUP BY NomeDaColuna1;
 
 ## **Parâmetro HAVING**
 
-Ficamos familiar com o parâmetro WHERE que é usado para filtrar as linhas. Da mesma forma o HAVING nos permite filtrar grupos. Esse parâmetro deve ser usado para decidir quais linhas formam cada grupo. Exatamente como o where, mas com essa diferença. (*Ele explica que o HAVING pode ser usado para filtrar linhas, mas que é o WHERE é mais eficiente.*)
+Ficamos familiar com o parâmetro *WHERE* que é usado para filtrar as linhas. Da mesma forma o HAVING nos permite filtrar grupos. Esse parâmetro deve ser usado para decidir quais linhas formam cada grupo. Exatamente como o *WHERE*, mas com essa diferença. (*Ele explica que o HAVING pode ser usado para filtrar linhas, mas que é o WHERE é mais eficiente.*)
 
 ~~~MySQL
 SELECT NomeDaColuna1, função(NomeDaColunaN) AS count
