@@ -40,7 +40,7 @@ Ele possui duas fases. Primeiro ele descobre quais linhas satisfazem a condiçã
 
 ## **Chave primária e índices**
 
-Toda vez que um comando possui o parâmetro *WHERE*, o *MySQL* tem que fazer um scan de toda a tabela para achar as linhas que o satisfazem. Isso não é muito eficiente. Adicionar um index na tabela pode aumentar significadamente a velocidade de procura pelas linhas desejadas. 
+Toda vez que um comando possui o parâmetro *WHERE*, o *MySQL* tem que fazer um scan de toda a tabela para achar as linhas que o satisfazem. Isso não é muito eficiente. Adicionar um index na tabela pode aumentar significadamente a velocidade de procura pelas linhas desejadas.
 
 O propósito do index primário é para representar a ordem
 da data. a coluna que for o index primário da tabela, não pode ser nulo.
